@@ -1,0 +1,15 @@
+{
+  "name": "weather-api",
+  "version": "1.0.0",
+  "description": "Weather API Web App using NodeJs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Imran",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
+  }
+}

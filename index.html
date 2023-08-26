@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather APP</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .main {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+    }
+
+    .container {
+      /* outline: 3px springgreen solid; */
+    }
+
+    h2 {
+      margin-left: 40%;
+      color: lightseagreen;
+    }
+
+    form {
+      height: 25px;
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text-label {
+      font-size: 30px;
+    }
+
+    #cityInput {
+      background-color: aliceblue;
+      height: 24px;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    .submit-btn {
+      height: 35px;
+      width: 50px;
+      margin-left: 10px;
+      background-color: crimson;
+      cursor: pointer;
+      border: 2px solid red;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <h2>Weather API App</h2>
+      <div class="container">
+        <form action="/" class="weather_form" method="post">
+          <label for="cityInput" class="text-label">City Name: </label>
+          <input type="text" id="cityInput" name="cityName" autofocus />
+          <button type="submit" name="btn" class="submit-btn">Go</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
