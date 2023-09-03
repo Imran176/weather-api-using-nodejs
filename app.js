@@ -1,6 +1,10 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const https = require("https");
 const bodyParser = require("body-parser");
+
+// Load env vars. You need to call dotenv before all the routes.
+dotenv.config({ path: "./config/config.env" });
 
 const app = express();
 
@@ -15,7 +19,7 @@ app.post("/", function (req, res) {
 
     var city = req.body.cityName;
     const query = city;
-    const API_Key = "9f76c473fff61a1466a3d4d60f5542bc";
+    const API_Key = process.env.API_KEY;
 
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&units=metric&appid=" + API_Key;
     console.log("URL: ", url);
